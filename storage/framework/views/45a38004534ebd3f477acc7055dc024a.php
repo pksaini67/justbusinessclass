@@ -1,0 +1,3 @@
+<svg class="w-3.5 h-3.5 ml-1.5 text-gold-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+  <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd"/>
+</svg><?php /**PATH C:\xampp\htdocs\justbusinessclass.us\storage\framework\views/ffc275f4234ca9095971b85090165163.blade.php ENDPATH**/ ?>

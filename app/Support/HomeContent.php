@@ -1,0 +1,436 @@
+<?php
+
+namespace App\Support;
+
+class HomeContent
+{
+    /**
+     * Get all structured content for the luxury travel homepage.
+     */
+    public static function get(): array
+    {
+        return [
+            'brand' => [
+                'name' => 'JustBusinessClass.us',
+                'short_name' => 'JustBusinessClass',
+                'domain' => 'justbusinessclass.us',
+                'tagline' => 'Concierge Business & First Class Flights, Personal to You.',
+                'phone' => '(800) 555-0147',
+                'phone_raw' => '+18005550147',
+                'email' => 'concierge@justbusinessclass.us',
+                'address' => '100 Park Avenue, New York, NY 10017',
+                'hours' => '24/7 Global Aviation Concierge Desk',
+            ],
+            'hero' => [
+                'eyebrow' => 'Private Aviation Standard · Global Commercial Airlines',
+                'title' => 'Fly Business Class for Less.',
+                'subcopy' => 'Privileged access to unpublished business and first class airline allocations. Handled with absolute discretion by your dedicated flight advisor.',
+                'stats' => [
+                    ['value' => '10+ Years', 'label' => 'Bespoke Route Experience'],
+                    ['value' => 'Up to 60%', 'label' => 'Wholesale Discount Potential'],
+                    ['value' => '60+ Airlines', 'label' => 'Global Alliances & Partners'],
+                    ['value' => '1:1 Advisor', 'label' => 'Direct Private Concierge'],
+                ],
+            ],
+            'marquee_airlines' => [
+                'Emirates',
+                'Qatar Airways',
+                'Singapore Airlines',
+                'Lufthansa',
+                'British Airways',
+                'Air France',
+                'Turkish Airlines',
+                'Etihad Airways',
+                'Delta One',
+                'United Polaris',
+                'ANA All Nippon',
+                'Cathay Pacific',
+            ],
+            'about' => [
+                'eyebrow' => 'About JustBusinessClass.us',
+                'heading' => 'The Art of Uncompromising Journey',
+                'paragraph_1' => 'At JustBusinessClass.us, we reject automated retail portals and impersonal call centers. We operate as an elite flight atelier, securing private consolidator contracts, wholesale corporate seat blocks, and unlisted premium cabin inventory across the world’s leading carriers.',
+                'paragraph_2' => 'Whether arranging multi-sector business delegations or urgent transatlantic departures, your designated flight advisor curates every leg—verifying lie-flat suite specifications, lounge amenities, and fast-track connection privileges.',
+                'stats' => [
+                    ['value' => 15, 'suffix' => 'K+', 'label' => 'Distinguished Travelers Served'],
+                    ['value' => 60, 'suffix' => '+', 'label' => 'Global Airline Partners'],
+                    ['value' => 90, 'suffix' => '%', 'label' => 'Repeat & Referred Clientele'],
+                    ['value' => 24, 'suffix' => '/7', 'label' => 'Direct Concierge Line'],
+                ],
+                'chips' => [
+                    ['label' => 'Private Airline Rates', 'url' => '#deals'],
+                    ['label' => 'Wholesale Business Class', 'url' => '#deals'],
+                    ['label' => 'Last-Minute Lie-Flat Deals', 'url' => '#deals'],
+                    ['label' => 'First Class Suite Rates', 'url' => '#deals'],
+                    ['label' => 'Corporate Accounts Desk', 'url' => '#contact'],
+                ],
+            ],
+            'signature_savings' => [
+                [
+                    'id' => 1,
+                    'route' => 'New York (JFK) → London (LHR)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'British Airways / Virgin Atlantic',
+                    'savings_pct' => 60,
+                    'image_slot' => 'destinations/london.jpg',
+                    'city' => 'London',
+                    'highlight' => 'Club Suite · Direct Lie-Flat',
+                ],
+                [
+                    'id' => 2,
+                    'route' => 'Boston (BOS) → Paris (CDG)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'Air France / Delta One',
+                    'savings_pct' => 58,
+                    'image_slot' => 'destinations/paris.jpg',
+                    'city' => 'Paris',
+                    'highlight' => 'Haute Cuisine · Flagship Lounge',
+                ],
+                [
+                    'id' => 3,
+                    'route' => 'New York (JFK) → Rome (FCO)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'ITA Airways / Lufthansa',
+                    'savings_pct' => 58,
+                    'image_slot' => 'destinations/rome.jpg',
+                    'city' => 'Rome',
+                    'highlight' => 'Lie-Flat Bed · Fine Cellar',
+                ],
+                [
+                    'id' => 4,
+                    'route' => 'Los Angeles (LAX) → Tokyo (HND)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'ANA / Japan Airlines',
+                    'savings_pct' => 57,
+                    'image_slot' => 'destinations/tokyo.jpg',
+                    'city' => 'Tokyo',
+                    'highlight' => '"The Room" Private Suite Option',
+                ],
+                [
+                    'id' => 5,
+                    'route' => 'San Francisco (SFO) → Singapore (SIN)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'Singapore Airlines',
+                    'savings_pct' => 57,
+                    'image_slot' => 'destinations/singapore.jpg',
+                    'city' => 'Singapore',
+                    'highlight' => 'World’s Best Service · Luxury Dining',
+                ],
+                [
+                    'id' => 6,
+                    'route' => 'Los Angeles (LAX) → Sydney (SYD)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'Qantas / United Polaris',
+                    'savings_pct' => 59,
+                    'image_slot' => 'destinations/sydney.jpg',
+                    'city' => 'Sydney',
+                    'highlight' => 'Polaris Lounge · Priority Boarding',
+                ],
+                [
+                    'id' => 7,
+                    'route' => 'New York (JFK) → Dubai (DXB)',
+                    'cabin' => 'First / Business Class',
+                    'airline' => 'Emirates / Qatar Airways',
+                    'savings_pct' => 58,
+                    'image_slot' => 'destinations/dubai.jpg',
+                    'city' => 'Dubai',
+                    'highlight' => 'Qsuite / A380 Bar Access',
+                ],
+                [
+                    'id' => 8,
+                    'route' => 'New York (JFK) → Cape Town (CPT)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'Qatar Airways / Emirates',
+                    'savings_pct' => 57,
+                    'image_slot' => 'destinations/capetown.jpg',
+                    'city' => 'Cape Town',
+                    'highlight' => 'Doha Al Mourjan Lounge Transfer',
+                ],
+                // Extended cards revealed on "Show more"
+                [
+                    'id' => 9,
+                    'route' => 'Chicago (ORD) → Zurich (ZRH)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'SWISS / Lufthansa',
+                    'savings_pct' => 59,
+                    'image_slot' => 'destinations/zurich.jpg',
+                    'city' => 'Zurich',
+                    'highlight' => 'Swiss Senses · Alpine Precision',
+                ],
+                [
+                    'id' => 10,
+                    'route' => 'Miami (MIA) → Buenos Aires (EZE)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'American / LATAM',
+                    'savings_pct' => 59,
+                    'image_slot' => 'destinations/buenosaires.jpg',
+                    'city' => 'Buenos Aires',
+                    'highlight' => 'Overnight Lie-Flat Rest',
+                ],
+                [
+                    'id' => 11,
+                    'route' => 'New York (EWR) → Hong Kong (HKG)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'Cathay Pacific',
+                    'savings_pct' => 57,
+                    'image_slot' => 'destinations/hongkong.jpg',
+                    'city' => 'Hong Kong',
+                    'highlight' => 'Aria Suite · The Pier Lounge',
+                ],
+                [
+                    'id' => 12,
+                    'route' => 'Seattle (SEA) → Seoul (ICN)',
+                    'cabin' => 'Business Class',
+                    'airline' => 'Korean Air / Delta One',
+                    'savings_pct' => 58,
+                    'image_slot' => 'destinations/seoul.jpg',
+                    'city' => 'Seoul',
+                    'highlight' => 'Prestige Suite · Korean Gastronomy',
+                ],
+            ],
+            'pricing_steps' => [
+                [
+                    'step' => '01',
+                    'title' => 'Inflated Retail Rack Rates',
+                    'description' => 'Commercial airline websites and search engines publicize inflated retail fares intended for unrepresented individual flyers.',
+                ],
+                [
+                    'step' => '02',
+                    'title' => 'Our Private Inventory',
+                    'description' => 'Through consolidator contracts and wholesale block allocations, we negotiate directly on unlisted net fare tiers.',
+                ],
+                [
+                    'step' => '03',
+                    'title' => 'Get the Best Price',
+                    'description' => 'We pass genuine 30% to 60% wholesale savings to you with full mileage accrual, lounge privileges, and ticket legitimacy.',
+                ],
+                [
+                    'step' => '04',
+                    'title' => 'Date & Route Optimization',
+                    'description' => 'A flexible shift of 12–24 hours often unlatches deeply discounted tier blocks. Your concierge manages every route variable.',
+                ],
+            ],
+            'concierge_stats' => [
+                ['value' => '10+ Yrs', 'label' => 'Senior Aviation Mastery'],
+                ['value' => '60+', 'label' => 'Global Airline Alliances'],
+                ['value' => '15,000+', 'label' => 'Affluent Travelers Flown'],
+                ['value' => '90%', 'label' => 'Repeat & Referred Clients'],
+            ],
+            'reasons' => [
+                [
+                    'icon' => 'sparkles',
+                    'title' => 'Exclusive Wholesale Contracts',
+                    'description' => 'Direct relationships with flagship airlines allow us to issue genuine tickets at prices unseen by retail search engines.',
+                ],
+                [
+                    'icon' => 'clock',
+                    'title' => 'Last-Minute Precision',
+                    'description' => 'Need to cross an ocean on short notice? We secure urgent lie-flat seats when retail engines show sold-out cabins or exorbitant rates.',
+                ],
+                [
+                    'icon' => 'arrows-pointing-out',
+                    'title' => 'Complex Multi-City Routing',
+                    'description' => 'Multi-city delegations, open-jaw itineraries, and mixed-carrier routing engineered seamlessly with single-contact accountability.',
+                ],
+                [
+                    'icon' => 'academic-cap',
+                    'title' => 'Decade of Cabin Expertise',
+                    'description' => 'Our advisors know seat pitch, cabin layout variations (e.g. Qsuite vs regular, A350 vs 777), and connection secrets at major international hubs.',
+                ],
+                [
+                    'icon' => 'phone-arrow-up-right',
+                    'title' => 'Direct Advisor, Zero IVR',
+                    'description' => 'You receive the direct phone extension, WhatsApp, and private email of an experienced concierge who personally manages your trip.',
+                ],
+                [
+                    'icon' => 'shield-check',
+                    'title' => 'End-to-End Journey Care',
+                    'description' => 'From advance seat selection and special dietary requests to schedule adjustments and proactive flight tracking, you are fully supported.',
+                ],
+            ],
+            'how_to_book' => [
+                [
+                    'step' => '1',
+                    'title' => 'Submit Your Route Request',
+                    'description' => 'Submit your preferred routing via our custom quote tool or dial your flight concierge directly at (800) 555-0147.',
+                ],
+                [
+                    'step' => '2',
+                    'title' => 'Consolidator Audit',
+                    'description' => 'Within 30–60 minutes, your advisor scans unlisted consolidator databases to curate the best 2–3 itinerary proposals.',
+                ],
+                [
+                    'step' => '3',
+                    'title' => 'Get the Best Price Proposal',
+                    'description' => 'Review transparent flight options with exact aircraft types, seat maps, change policies, and breakdown of wholesale savings.',
+                ],
+                [
+                    'step' => '4',
+                    'title' => 'Confirm & Board in Style',
+                    'description' => 'Approve your preferred itinerary with secure checkout. Receive electronic tickets, lounge passes, and frequent flyer credits directly.',
+                ],
+            ],
+            'regions' => [
+                [
+                    'name' => 'Europe',
+                    'cities' => 'London, Paris, Rome, Zurich, Milan, Madrid',
+                    'image_slot' => 'destinations/premier-destination/europe.png',
+                ],
+                [
+                    'name' => 'Asia & Pacific',
+                    'cities' => 'Tokyo, Singapore, Bangkok, Bali, Hong Kong',
+                    'image_slot' => 'destinations/premier-destination/Asia-pacific.png',
+                ],
+                [
+                    'name' => 'Middle East',
+                    'cities' => 'Dubai, Doha, Abu Dhabi, Riyadh',
+                    'image_slot' => 'destinations/premier-destination/middleeasat.png',
+                ],
+                [
+                    'name' => 'Oceania',
+                    'cities' => 'Sydney, Melbourne, Auckland, Fiji',
+                    'image_slot' => 'destinations/premier-destination/oceania.png',
+                ],
+                [
+                    'name' => 'Africa',
+                    'cities' => 'Cape Town, Johannesburg, Nairobi, Cairo',
+                    'image_slot' => 'destinations/premier-destination/Africa.png',
+                ],
+                [
+                    'name' => 'Latin America',
+                    'cities' => 'Buenos Aires, São Paulo, Lima, Santiago',
+                    'image_slot' => 'destinations/premier-destination/latin-america.png',
+                ],
+                [
+                    'name' => 'Indian Subcontinent',
+                    'cities' => 'New Delhi, Mumbai, Colombo, Male (Maldives)',
+                    'image_slot' => 'destinations/premier-destination/indian-subcontinent.png',
+                ],
+            ],
+            'popular_cities' => [
+                'London', 'Paris', 'Rome', 'Tokyo', 'Singapore', 'Dubai',
+                'Sydney', 'Zurich', 'Milan', 'Hong Kong', 'Barcelona', 'Frankfurt',
+                'Bangkok', 'Amsterdam', 'Vienna', 'Cape Town', 'Athens', 'Madrid',
+                'Seoul', 'Munich', 'Lisbon', 'Auckland', 'Buenos Aires', 'Doha',
+            ],
+            'testimonials' => [
+                [
+                    'quote' => 'JustBusinessClass.us saved our executive team over $26,000 on transatlantic business class tickets during London Tech Week. The advisor response was fast, professional, and completely tailored.',
+                    'author' => 'Victoria Sterling',
+                    'role' => 'Managing Director, Global Capital',
+                    'city' => 'New York, NY',
+                    'route' => 'JFK → LHR Round Trip',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'Booking Singapore Suites through retail engines was quoting $14,000+. JustBusinessClass.us delivered the identical carrier, flight numbers, and lie-flat suite for a fraction of that cost.',
+                    'author' => 'Harrison Vance',
+                    'role' => 'Private Equity Principal',
+                    'city' => 'San Francisco, CA',
+                    'route' => 'SFO → SIN First Class',
+                    'rating' => 5,
+                ],
+                [
+                    'quote' => 'When our Tokyo flight was delayed due to weather, our advisor proactively rebooked us through Haneda before we even stepped into our limousine. An essential service for frequent flyers.',
+                    'author' => 'Dr. Aris Thorne',
+                    'role' => 'Biotech Senior Partner',
+                    'city' => 'Boston, MA',
+                    'route' => 'BOS → NRT Business Class',
+                    'rating' => 5,
+                ],
+            ],
+            'faqs' => [
+                [
+                    'question' => 'What is the distinction between Business Class and Premium Economy?',
+                    'answer' => 'Business class delivers fully lie-flat beds (180-degree flat sleeper suites), direct aisle access, multi-course dining curated by acclaimed chefs, premium wine and Champagne selections, generous baggage allowances, priority security screening, and access to flagship international airline lounges. Premium Economy provides a slightly wider recliner seat with extra legroom, but does not provide lie-flat beds or comparable flagship lounge privileges.',
+                ],
+                [
+                    'question' => 'Why are your business class rates lower than airline websites?',
+                    'answer' => 'Airlines partner privately with high-volume luxury consolidators and wholesale agencies to distribute premium seats without lowering their publicly advertised retail rack rates. These private allocations and corporate net fares are not visible on Google Flights or consumer booking sites. We pass these wholesale savings directly to our clients.',
+                ],
+                [
+                    'question' => 'What amenities and privileges are included with my ticket?',
+                    'answer' => 'Every ticket booked through JustBusinessClass.us is a genuine, confirmed e-ticket issued directly on official airline stock. You receive all premium cabin privileges: 180° lie-flat beds, lounge invitations, priority check-in and boarding, fast-track security, 2–3 checked bags, gourmet dining, and accrual of eligible frequent flyer miles.',
+                ],
+                [
+                    'question' => 'Can you arrange complex multi-city and international itineraries?',
+                    'answer' => 'Yes. Complex itineraries are our specialty. Whether you require open-jaw routes (e.g. flying into London and returning from Milan), multi-stop worldwide delegations, or mixed-airline routing, your dedicated flight concierge builds the most efficient schedule at optimal rates.',
+                ],
+                [
+                    'question' => 'Are your business class tickets refundable and changeable?',
+                    'answer' => 'Yes. We match fares to your flexibility requirements. Most of our wholesale fares allow date changes and ticket reissues. Your concierge provides written details on change rules and cancellation policies before you confirm payment.',
+                ],
+                [
+                    'question' => 'How quickly will I receive my quote after submitting the request?',
+                    'answer' => 'Our flight advisors review inventory directly to check aircraft configurations and availability. During operating hours, you will receive a comprehensive written itinerary proposal within 30 to 60 minutes. For urgent departures within 24 hours, call our 24/7 priority desk directly.',
+                ],
+            ],
+            'premier_airlines' => [
+                ['name' => 'Emirates', 'code' => 'EK', 'tagline' => 'A380 Onboard Lounge & Private Suites', 'badge' => 'World’s Best Inflight'],
+                ['name' => 'Qatar Airways', 'code' => 'QR', 'tagline' => 'Qsuite First in Business Standard', 'badge' => 'Skytrax Airline of the Year'],
+                ['name' => 'Singapore Airlines', 'code' => 'SQ', 'tagline' => 'Unrivaled Space & Luxury Hospitality', 'badge' => 'Five-Star Global Airline'],
+                ['name' => 'Air France', 'code' => 'AF', 'tagline' => 'French Haute Cuisine at 38,000 Feet', 'badge' => 'European Elegance'],
+                ['name' => 'British Airways', 'code' => 'BA', 'tagline' => 'Club Suite with Privacy Doors', 'badge' => 'Transatlantic Benchmark'],
+                ['name' => 'Lufthansa', 'code' => 'LH', 'tagline' => 'German Precision & Allegris Suites', 'badge' => 'Star Alliance Founding Member'],
+                ['name' => 'ANA All Nippon', 'code' => 'NH', 'tagline' => '"The Room" Expansive Business Suite', 'badge' => 'Excellence in Service'],
+                ['name' => 'Etihad Airways', 'code' => 'EY', 'tagline' => 'Business Studio Sanctuary', 'badge' => 'Middle Eastern Hospitality'],
+            ],
+            'footer_columns' => [
+                'regions' => [
+                    'title' => 'Premier Regions',
+                    'links' => [
+                        ['label' => 'Business Class to Europe', 'url' => '/deals?region=Europe'],
+                        ['label' => 'Business Class to Asia', 'url' => '/deals?region=Asia'],
+                        ['label' => 'Business Class to Oceania', 'url' => '/deals?region=Oceania'],
+                        ['label' => 'Business Class to Middle East', 'url' => '/deals?region=Middle+East'],
+                        ['label' => 'Business Class to Africa', 'url' => '/deals?region=Africa'],
+                        ['label' => 'Business Class to Latin America', 'url' => '/deals?region=Americas'],
+                    ],
+                ],
+                'cities' => [
+                    'title' => 'Country Deals',
+                    'links' => [
+                        ['label' => 'Business Class Australia Deals', 'url' => '/deals/australia'],
+                        ['label' => 'Business Class United Kingdom', 'url' => '/deals/united-kingdom'],
+                        ['label' => 'Business Class France Deals', 'url' => '/deals/france'],
+                        ['label' => 'Business Class Japan Deals', 'url' => '/deals/japan'],
+                        ['label' => 'Business Class Italy Deals', 'url' => '/deals/italy'],
+                        ['label' => 'View All Country Flight Deals', 'url' => '/deals'],
+                    ],
+                ],
+                'company' => [
+                    'title' => 'Concierge Atelier',
+                    'links' => [
+                        ['label' => 'About JustBusinessClass', 'url' => '/about'],
+                        ['label' => 'How Pricing Works', 'url' => '/#pricing'],
+                        ['label' => 'Client Testimonials', 'url' => '/#testimonials'],
+                        ['label' => 'Partner Airlines Directory', 'url' => '/airlines'],
+                        ['label' => 'Contact Flight Concierge', 'url' => '/contact-us'],
+                        ['label' => '24/7 Telephone Desk', 'url' => 'tel:18005550147'],
+                    ],
+                ],
+                'information' => [
+                    'title' => 'Travel Intelligence',
+                    'links' => [
+                        ['label' => 'Frequently Asked Questions', 'url' => '/#faq'],
+                        ['label' => 'Travel Journal & Blog', 'url' => '/blog'],
+                        ['label' => 'International First Class Guide', 'url' => '/blog/how-to-book-international-first-class-for-less'],
+                        ['label' => 'Direct Aisle Access Cabins', 'url' => '/blog/top-5-business-class-cabins-direct-aisle-access-2026'],
+                        ['label' => 'Transatlantic Alliances Routing', 'url' => '/blog/mastering-skyteam-star-alliance-transatlantic-routing'],
+                        ['label' => 'Instant WhatsApp Support', 'url' => 'https://wa.me/18005550147'],
+                    ],
+                ],
+                'policies' => [
+                    'title' => 'Policies & Trust',
+                    'links' => [
+                        ['label' => 'Privacy Policy', 'url' => '/privacy-policy'],
+                        ['label' => 'Terms of Booking', 'url' => '/terms-of-booking'],
+                        ['label' => 'Wholesale Pricing Guarantee', 'url' => '/about#faq'],
+                        ['label' => 'Official Carrier E-Tickets', 'url' => '/#faq'],
+                        ['label' => 'Midtown Manhattan Atelier', 'url' => '/contact-us'],
+                    ],
+                ],
+            ],
+        ];
+    }
+}

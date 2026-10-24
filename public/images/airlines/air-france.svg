@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" width="420" height="120">
+  <!-- Air France Wordmark and Accent Ribbon -->
+  <g fill="#002157">
+    <!-- AIR -->
+    <text x="18" y="72" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" letter-spacing="1">AIR</text>
+    <!-- FRANCE -->
+    <text x="110" y="72" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="300" letter-spacing="2">FRANCE</text>
+  </g>
+  <!-- Red Accent Ribbon -->
+  <g transform="translate(322, 28) scale(2.8)">
+    <path fill="#ED1C24" d="M13.776 3.9L5.184 16.332C4.051 17.969 2.208 19.548 0 19.721v.379h9.552c2.544 0 4.397-1.656 5.616-3.48L24 3.9Z"/>
+  </g>
+</svg>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirTrip Maker — Cheap Flights & Airline Tickets</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5.3.3 & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ============ TOP UTILITY STRIP ============ -->
+    <div class="atm-topstrip">
+        <div class="container">
+            <div class="atm-topstrip-inner">
+                <!-- Left: Trust Badges -->
+                <div class="atm-topstrip-left">
+                    <span class="atm-top-item">
+                        <i class="bi bi-patch-check-fill text-warning"></i> ASTA Certified Partner
+                    </span>
+                    <span class="atm-top-divider d-none d-sm-inline-block"></span>
+                    <span class="atm-top-item d-none d-sm-inline-flex">
+                        <i class="bi bi-award-fill text-warning"></i> 16+ Years Experience
+                    </span>
+                    <span class="atm-top-divider d-none d-md-inline-block"></span>
+                    <span class="atm-top-item d-none d-md-inline-flex">
+                        <i class="bi bi-headset text-info"></i> 24×7 Live Travel Desk
+                    </span>
+                </div>
+
+                <!-- Right: Quick Utility Links -->
+                <div class="atm-topstrip-right">
+                    <a href="https://www.airtripmaker.com/blog">
+                        <i class="bi bi-journal-richtext"></i> <span class="d-none d-sm-inline">Travel</span> Blog
+                    </a>
+                    <a href="https://www.airtripmaker.com/contact-us">
+                        <i class="bi bi-geo-alt"></i> Contact
+                    </a>
+                    <a href="https://www.airtripmaker.com/terms-and-conditions" class="d-none d-sm-inline-flex">
+                        <i class="bi bi-shield-lock"></i> Terms
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ MAIN HEADER ============ -->
+    <header class="atm-header sticky-top" id="atmHeader">
+        <nav class="navbar navbar-expand-xl atm-navbar">
+            <div class="container">
+
+                <!-- Brand Logo -->
+                <a class="navbar-brand atm-brand" href="https://www.airtripmaker.com/">
+                    <img src="https://www.airtripmaker.com/images/logo.jpg" alt="AirTrip Maker" class="atm-logo-img" />
+                </a>
+
+                <!-- Mobile & Tablet: Quick Call Dropdown -->
+                <div class="d-xl-none ms-auto me-2">
+                    <div class="dropdown">
+                        <button class="btn atm-call-chip" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="atm-pulse-dot"></span>
+                            <i class="bi bi-telephone-outbound-fill"></i>
+                            <span>24×7 Desk</span>
+                            <i class="bi bi-chevron-down small opacity-75"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end atm-call-menu shadow-lg">
+                            <li class="px-3 py-1 text-uppercase small fw-bold text-muted" style="font-size: 0.7rem;">
+                                Toll-Free Booking Desk</li>
+                            <li>
+                                <a class="dropdown-item atm-call-drop-item" href="tel:+18448078355">
+                                    <img src="https://www.airtripmaker.com/images/us-icon.png" width="24" height="24"
+                                        class="rounded-circle object-fit-cover" alt="US" />
+                                    <div>
+                                        <small>USA Toll-Free · 24×7</small>
+                                        <strong>1-844-807-8355</strong>
+                                    </div>
+                                    <i class="bi bi-telephone-fill ms-auto text-primary"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider my-1">
+                            </li>
+                            <li>
+                                <a class="dropdown-item atm-call-drop-item" href="tel:+18335328777">
+                                    <img src="https://www.airtripmaker.com/images/canada-flag.png" width="24"
+                                        height="24" class="rounded-circle object-fit-cover" alt="CA" />
+                                    <div>
+                                        <small>Canada Toll-Free · 24×7</small>
+                                        <strong>1-833-532-8777</strong>
+                                    </div>
+                                    <i class="bi bi-telephone-fill ms-auto text-danger"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="navbar-toggler atm-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#atmMobileNav" aria-controls="atmMobileNav" aria-label="Open menu">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="collapse navbar-collapse" id="atmDesktopNav">
+                    <ul class="navbar-nav mx-auto atm-nav-list">
+
+                        <!-- Flights (Mega Menu) -->
+                        <li class="nav-item dropdown position-static atm-mega-item">
+                            <a class="nav-link dropdown-toggle atm-nav-link" href="#" data-bs-toggle="dropdown">
+                                Flights
+                            </a>
+                            <div class="dropdown-menu atm-mega">
+                                <div class="container">
+                                    <div class="row g-4 align-items-stretch">
+                                        <div class="col-lg-3">
+                                            <div class="atm-mega-col">
+                                                <h6 class="atm-mega-title"><i
+                                                        class="bi bi-globe-central-south-asia text-primary me-2"></i>India
+                                                    Routes</h6>
+                                                <ul class="atm-mega-list">
+                                                    <li><a href="https://www.airtripmaker.com/flights/usa-to-india"><span>USA
+                                                                to India</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/flights/india-to-usa"><span>India
+                                                                to USA</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/flights/canada-to-india"><span>Canada
+                                                                to India</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/flights/india-to-canada"><span>India
+                                                                to Canada</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="atm-mega-col">
+                                                <h6 class="atm-mega-title"><i
+                                                        class="bi bi-compass text-primary me-2"></i>Global Destinations
+                                                </h6>
+                                                <ul class="atm-mega-list">
+                                                    <li><a href="https://www.airtripmaker.com/flights/usa-to-pakistan"><span>Flights
+                                                                to Pakistan</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/flights/usa-to-nepal"><span>Flights
+                                                                to Nepal</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/flights/usa-to-europe"><span>Flights
+                                                                to Europe</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/flights/usa-to-australia"><span>Flights
+                                                                to Australia</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="atm-mega-col">
+                                                <h6 class="atm-mega-title"><i
+                                                        class="bi bi-bookmark-star text-primary me-2"></i>Special
+                                                    Categories</h6>
+                                                <ul class="atm-mega-list">
+                                                    <li><a href="https://www.airtripmaker.com/domestic-flights"><span>US
+                                                                Domestic Flights</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/hot-deals"><span>Last
+                                                                Minute Deals</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/corporate-travel"><span>Corporate
+                                                                Travel</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a href="https://www.airtripmaker.com/student-travel"><span>Student
+                                                                Discounts</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="atm-mega-promo h-100">
+                                                <div class="atm-promo-badge"><i class="bi bi-lightning-charge-fill"></i>
+                                                    Save Up To 40%</div>
+                                                <h5 class="text-white fw-bold mb-1">Unpublished Phone Fares</h5>
+                                                <p class="small text-white-50 mb-3">Our travel agents have access to
+                                                    private consolidator rates not shown online.</p>
+                                                <a href="tel:+18448078355" class="btn atm-btn-gold w-100 mt-auto">
+                                                    <i class="bi bi-telephone-fill me-1"></i> 1-844-807-8355
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link atm-nav-link" href="https://www.airtripmaker.com/domestic-flights">US
+                                Domestic</a>
+                        </li>
+
+                        <!-- Premium Economy -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle atm-nav-link" href="#" data-bs-toggle="dropdown">Premium
+                                Economy</a>
+                            <ul class="dropdown-menu atm-simple-drop">
+                                <li><a class="dropdown-item"
+                                        href="https://www.airtripmaker.com/premium-economy-flights/usa-to-india"><span>USA
+                                            → India</span> <i class="bi bi-arrow-right-short"></i></a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.airtripmaker.com/premium-economy-flights/india-to-usa"><span>India
+                                            → USA</span> <i class="bi bi-arrow-right-short"></i></a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.airtripmaker.com/premium-economy-flights/canada-to-india"><span>Canada
+                                            → India</span> <i class="bi bi-arrow-right-short"></i></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Business Class (Mega Menu) -->
+                        <li class="nav-item dropdown position-static atm-mega-item">
+                            <a class="nav-link dropdown-toggle atm-nav-link" href="#" data-bs-toggle="dropdown">
+                                Business Class
+                            </a>
+                            <div class="dropdown-menu atm-mega">
+                                <div class="container">
+                                    <div class="row g-4 align-items-stretch">
+                                        <div class="col-lg-3">
+                                            <div class="atm-mega-col">
+                                                <h6 class="atm-mega-title"><i
+                                                        class="bi bi-Pin-map-fill text-primary me-2"></i>Indian
+                                                    Subcontinent</h6>
+                                                <ul class="atm-mega-list">
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-india"><span>USA
+                                                                → India</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/india-to-usa"><span>India
+                                                                → USA</span> <i class="bi bi-arrow-right-short"></i></a>
+                                                    </li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/canada-to-india"><span>Canada
+                                                                → India</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-pakistan"><span>USA
+                                                                → Pakistan</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-nepal"><span>USA
+                                                                → Nepal</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="atm-mega-col">
+                                                <h6 class="atm-mega-title"><i
+                                                        class="bi bi-sunrise text-primary me-2"></i>Asia & Pacific</h6>
+                                                <ul class="atm-mega-list">
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-china"><span>China</span>
+                                                            <i class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-japan"><span>Japan</span>
+                                                            <i class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-singapore"><span>Singapore</span>
+                                                            <i class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-thailand"><span>Thailand</span>
+                                                            <i class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-bali"><span>Bali</span>
+                                                            <i class="bi bi-arrow-right-short"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="atm-mega-col">
+                                                <h6 class="atm-mega-title"><i
+                                                        class="bi bi-globe2 text-primary me-2"></i>Rest of World</h6>
+                                                <ul class="atm-mega-list">
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-europe"><span>Europe</span>
+                                                            <i class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-africa"><span>Africa</span>
+                                                            <i class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-new-zealand"><span>New
+                                                                Zealand</span> <i
+                                                                class="bi bi-arrow-right-short"></i></a></li>
+                                                    <li><a
+                                                            href="https://www.airtripmaker.com/business-class-flights/usa-to-australia"><span>Australia</span>
+                                                            <i class="bi bi-arrow-right-short"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="atm-mega-promo h-100">
+                                                <div class="atm-promo-badge"><i class="bi bi-gem"></i> Luxury Cabin
+                                                </div>
+                                                <h5 class="text-white fw-bold mb-1">Fly Lie-Flat for Less</h5>
+                                                <p class="small text-white-50 mb-3">Up to 40% off Business Class tickets
+                                                    from USA & Canada on top airlines.</p>
+                                                <a href="tel:+18448078355" class="btn atm-btn-gold w-100 mt-auto">
+                                                    <i class="bi bi-telephone-fill me-1"></i> 1-844-807-8355
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- First Class -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle atm-nav-link" href="#" data-bs-toggle="dropdown">First
+                                Class</a>
+                            <ul class="dropdown-menu atm-simple-drop">
+                                <li><a class="dropdown-item"
+                                        href="https://www.airtripmaker.com/first-class-flights/usa-to-india"><span>USA →
+                                            India</span> <i class="bi bi-arrow-right-short"></i></a></li>
+                                <li><a class="dropdown-item"
+                                        href="https://www.airtripmaker.com/first-class-flights/india-to-usa"><span>India
+                                            → USA</span> <i class="bi bi-arrow-right-short"></i></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Hot Deals -->
+                        <li class="nav-item">
+                            <a class="nav-link atm-nav-link atm-hot-pill" href="https://www.airtripmaker.com/hot-deals">
+                                <i class="bi bi-fire"></i> Hot Deals
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Desktop Dual Call CTA -->
+                    <div class="atm-desktop-cta">
+                        <a href="tel:+18448078355" class="atm-cta-card">
+                            <div class="atm-cta-flag">
+                                <img src="https://www.airtripmaker.com/images/us-icon.png" alt="US" />
+                                <span class="atm-live-dot"></span>
+                            </div>
+                            <div class="atm-cta-info">
+                                <small>USA 24×7 Toll-Free</small>
+                                <strong>1-844-807-8355</strong>
+                            </div>
+                        </a>
+
+                        <a href="tel:+18335328777" class="atm-cta-card atm-cta-card-ca">
+                            <div class="atm-cta-flag">
+                                <img src="https://www.airtripmaker.com/images/canada-flag.png" alt="CA" />
+                                <span class="atm-live-dot"></span>
+                            </div>
+                            <div class="atm-cta-info">
+                                <small>Canada 24×7</small>
+                                <strong>1-833-532-8777</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============ MOBILE OFFCANVAS NAV ============ -->
+    <div class="offcanvas offcanvas-end atm-offcanvas" tabindex="-1" id="atmMobileNav">
+        <div class="offcanvas-header border-bottom">
+            <img src="https://www.airtripmaker.com/images/logo.jpg" alt="AirTrip Maker" style="max-height: 40px;">
+            <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column justify-content-between p-0">
+
+            <div class="accordion accordion-flush atm-mobile-accordion" id="atmMobileAcc">
+                <!-- Flights -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#mFlights">
+                            <span class="atm-m-icon"><i class="bi bi-airplane-fill"></i></span> Flights
+                        </button>
+                    </h2>
+                    <div id="mFlights" class="accordion-collapse collapse" data-bs-parent="#atmMobileAcc">
+                        <div class="accordion-body">
+                            <a href="https://www.airtripmaker.com/flights/usa-to-india">USA → India</a>
+                            <a href="https://www.airtripmaker.com/flights/india-to-usa">India → USA</a>
+                            <a href="https://www.airtripmaker.com/flights/canada-to-india">Canada → India</a>
+                            <a href="https://www.airtripmaker.com/flights/india-to-canada">India → Canada</a>
+                            <a href="https://www.airtripmaker.com/flights/usa-to-pakistan">USA → Pakistan</a>
+                            <a href="https://www.airtripmaker.com/flights/usa-to-europe">USA → Europe</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- US Domestic -->
+                <div class="accordion-item">
+                    <a class="accordion-button atm-no-collapse" href="https://www.airtripmaker.com/domestic-flights">
+                        <span class="atm-m-icon"><i class="bi bi-geo-alt-fill"></i></span> US Domestic
+                    </a>
+                </div>
+
+                <!-- Premium Economy -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#mPrem">
+                            <span class="atm-m-icon"><i class="bi bi-stars"></i></span> Premium Economy
+                        </button>
+                    </h2>
+                    <div id="mPrem" class="accordion-collapse collapse" data-bs-parent="#atmMobileAcc">
+                        <div class="accordion-body">
+                            <a href="https://www.airtripmaker.com/premium-economy-flights/usa-to-india">USA → India</a>
+                            <a href="https://www.airtripmaker.com/premium-economy-flights/india-to-usa">India → USA</a>
+                            <a href="https://www.airtripmaker.com/premium-economy-flights/canada-to-india">Canada →
+                                India</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Class -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#mBiz">
+                            <span class="atm-m-icon"><i class="bi bi-briefcase-fill"></i></span> Business Class
+                        </button>
+                    </h2>
+                    <div id="mBiz" class="accordion-collapse collapse" data-bs-parent="#atmMobileAcc">
+                        <div class="accordion-body">
+                            <a href="https://www.airtripmaker.com/business-class-flights/usa-to-india">USA → India</a>
+                            <a href="https://www.airtripmaker.com/business-class-flights/india-to-usa">India → USA</a>
+                            <a href="https://www.airtripmaker.com/business-class-flights/canada-to-india">Canada →
+                                India</a>
+                            <a href="https://www.airtripmaker.com/business-class-flights/usa-to-europe">USA → Europe</a>
+                            <a href="https://www.airtripmaker.com/business-class-flights/usa-to-asia">USA → Asia</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- First Class -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#mFirst">
+                            <span class="atm-m-icon"><i class="bi bi-gem"></i></span> First Class
+                        </button>
+                    </h2>
+                    <div id="mFirst" class="accordion-collapse collapse" data-bs-parent="#atmMobileAcc">
+                        <div class="accordion-body">
+                            <a href="https://www.airtripmaker.com/first-class-flights/usa-to-india">USA → India</a>
+                            <a href="https://www.airtripmaker.com/first-class-flights/india-to-usa">India → USA</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hot Deals -->
+                <div class="accordion-item">
+                    <a class="accordion-button atm-no-collapse text-danger fw-bold"
+                        href="https://www.airtripmaker.com/hot-deals">
+                        <span class="atm-m-icon bg-danger-subtle text-danger"><i class="bi bi-fire"></i></span> Hot
+                        Deals
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Footer CTA Box -->
+            <div class="atm-mobile-cta-box p-3 bg-light border-top">
+                <div class="small fw-bold text-uppercase text-muted mb-2">Speak to a Travel Expert (24×7)</div>
+                <a href="tel:+18448078355" class="atm-m-call-btn mb-2">
+                    <img src="https://www.airtripmaker.com/images/us-icon.png" width="24" alt="US">
+                    <div>
+                        <small>USA Toll-Free</small>
+                        <strong>1-844-807-8355</strong>
+                    </div>
+                    <i class="bi bi-telephone-outbound-fill ms-auto"></i>
+                </a>
+                <a href="tel:+18335328777" class="atm-m-call-btn atm-m-call-ca">
+                    <img src="https://www.airtripmaker.com/images/canada-flag.png" width="24" alt="CA">
+                    <div>
+                        <small>Canada Toll-Free</small>
+                        <strong>1-833-532-8777</strong>
+                    </div>
+                    <i class="bi bi-telephone-outbound-fill ms-auto"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ============ DEMO HERO SECTION (Remove in Production) ============ -->
+    <main class="atm-demo-hero">
+        <div class="container py-5">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-8">
+                    <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-3 fw-semibold">
+                        <i class="bi bi-airplane-engines me-1"></i> Trusted by 50,000+ Global Travelers
+                    </span>
+                    <h1 class="display-5 fw-extrabold text-dark mb-3">Book Cheap Flights to India & Worldwide</h1>
+                    <p class="lead text-secondary mb-0">Your ASTA-certified travel companion for 16+ years. Unlock
+                        unpublished consolidator fares & save up to 40% on Business Class.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="atm-footer">
+
+        <!-- Pre-Footer Deal / Call Banner -->
+        <div class="atm-prefooter">
+            <div class="container">
+                <div class="atm-prefooter-box">
+                    <div class="row align-items-center g-3">
+                        <div class="col-lg-7">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="atm-prefooter-icon d-none d-sm-flex">
+                                    <i class="bi bi-headset"></i>
+                                </div>
+                                <div>
+                                    <span class="badge bg-warning text-dark fw-bold mb-1">UNPUBLISHED PHONE DEALS</span>
+                                    <h4 class="text-white fw-bold mb-1">Looking for cheaper flights or custom
+                                        itineraries?</h4>
+                                    <p class="text-white-50 mb-0 small">Call our 24×7 travel desk for instant quotes,
+                                        extra baggage deals, and last-minute seats.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-lg-end">
+                            <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+                                <a href="tel:+18448078355" class="btn atm-btn-gold px-4 py-2">
+                                    <i class="bi bi-telephone-fill me-2"></i>US: 1-844-807-8355
+                                </a>
+                                <a href="tel:+18335328777" class="btn btn-outline-light px-4 py-2 fw-semibold">
+                                    <i class="bi bi-telephone-fill me-2"></i>CA: 1-833-532-8777
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="container">
+            <div class="row g-4 atm-footer-top">
+
+                <!-- Column 1: Brand & Trust -->
+                <div class="col-lg-4 col-md-6 pe-lg-4">
+                    <a href="https://www.airtripmaker.com/" class="d-inline-block mb-3 bg-white p-2 rounded-3">
+                        <img src="https://www.airtripmaker.com/images/logo.jpg" alt="AirTrip Maker"
+                            class="atm-footer-logo" />
+                    </a>
+                    <p class="atm-footer-about">
+                        AirTrip Maker is an ASTA-certified travel agency with over 16 years of expertise helping global
+                        travelers secure affordable international flights, premium cabins, and unpublished consolidator
+                        fares.
+                    </p>
+                    <div class="atm-footer-trust">
+                        <span class="atm-trust-pill"><i class="bi bi-shield-check text-warning"></i> ASTA
+                            Certified</span>
+                        <span class="atm-trust-pill"><i class="bi bi-award text-warning"></i> 16+ Yrs Exp</span>
+                        <span class="atm-trust-pill"><i class="bi bi-lock-fill text-info"></i> SSL Secure</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="atm-footer-title">Company</h6>
+                    <ul class="atm-footer-list">
+                        <li><a href="https://www.airtripmaker.com/">Home</a></li>
+                        <li><a href="https://www.airtripmaker.com/blog">Travel Blog</a></li>
+                        <li><a href="https://www.airtripmaker.com/hot-deals">Hot Deals</a></li>
+                        <li><a href="https://www.airtripmaker.com/corporate-travel">Corporate Travel</a></li>
+                        <li><a href="https://www.airtripmaker.com/student-travel">Student Travel</a></li>
+                        <li><a href="https://www.airtripmaker.com/contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Popular Cabin & Routes -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="atm-footer-title">Top Flights</h6>
+                    <ul class="atm-footer-list">
+                        <li><a href="https://www.airtripmaker.com/flights/usa-to-india">USA to India</a></li>
+                        <li><a href="https://www.airtripmaker.com/flights/canada-to-india">Canada to India</a></li>
+                        <li><a href="https://www.airtripmaker.com/domestic-flights">US Domestic</a></li>
+                        <li><a href="https://www.airtripmaker.com/premium-economy-flights/usa-to-india">Premium
+                                Economy</a></li>
+                        <li><a href="https://www.airtripmaker.com/business-class-flights/usa-to-india">Business
+                                Class</a></li>
+                        <li><a href="https://www.airtripmaker.com/first-class-flights/usa-to-india">First Class</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Direct Reservation Desk -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="atm-footer-title">24×7 Reservation Desk</h6>
+
+                    <div class="atm-footer-contact-cards">
+                        <a href="tel:+18448078355" class="atm-footer-call-card">
+                            <img src="https://www.airtripmaker.com/images/us-icon.png" width="28" height="28"
+                                class="rounded-circle" alt="USA">
+                            <div>
+                                <small>USA Toll-Free · 24/7 Support</small>
+                                <strong>1-844-807-8355</strong>
+                            </div>
+                            <span class="atm-call-arrow"><i class="bi bi-telephone-outbound"></i></span>
+                        </a>
+
+                        <a href="tel:+18335328777" class="atm-footer-call-card">
+                            <img src="https://www.airtripmaker.com/images/canada-flag.png" width="28" height="28"
+                                class="rounded-circle" alt="Canada">
+                            <div>
+                                <small>Canada Toll-Free · 24/7 Support</small>
+                                <strong>1-833-532-8777</strong>
+                            </div>
+                            <span class="atm-call-arrow"><i class="bi bi-telephone-outbound"></i></span>
+                        </a>
+                    </div>
+
+                    <a href="mailto:support@airtripmaker.com" class="atm-footer-email mt-3">
+                        <i class="bi bi-envelope-paper-fill text-warning me-2"></i> support@airtripmaker.com
+                    </a>
+                </div>
+
+            </div>
+
+            <hr class="atm-footer-hr" />
+
+            <!-- Bottom Copyright & Legal -->
+            <div class="atm-footer-bottom">
+                <p class="mb-0">© <span id="atmYear"></span> <strong>AirTrip Maker</strong>. All rights reserved.</p>
+
+                <div class="atm-payment-icons d-none d-md-flex align-items-center gap-2 text-white-50 small">
+                    <span>We Accept:</span>
+                    <i class="bi bi-credit-card-2-front fs-5 text-light"></i>
+                    <span class="badge bg-secondary bg-opacity-25 text-light fw-normal">Visa</span>
+                    <span class="badge bg-secondary bg-opacity-25 text-light fw-normal">MasterCard</span>
+                    <span class="badge bg-secondary bg-opacity-25 text-light fw-normal">Amex</span>
+                    <span class="badge bg-secondary bg-opacity-25 text-light fw-normal">Discover</span>
+                </div>
+
+                <div class="atm-footer-bottom-links">
+                    <a href="https://www.airtripmaker.com/terms-and-conditions">Terms & Conditions</a>
+                    <a href="https://www.airtripmaker.com/privacy-policy">Privacy Policy</a>
+                    <a href="https://www.airtripmaker.com/contact-us">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set Dynamic Year
+        document.getElementById('atmYear').textContent = new Date().getFullYear();
+
+        // Add subtle shadow to sticky header on scroll
+        const header = document.getElementById('atmHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 15) {
+                header.classList.add('atm-header-scrolled');
+            } else {
+                header.classList.remove('atm-header-scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

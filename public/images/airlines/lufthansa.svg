@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
+  <defs>
+    <linearGradient id="grad-lufthansa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05164D" />
+      <stop offset="100%" stop-color="#FFAC00" />
+    </linearGradient>
+  </defs>
+  <!-- Carrier Emblem / Monogram Icon -->
+  <rect x="8" y="14" width="72" height="72" rx="18" fill="#05164D" />
+  <rect x="12" y="18" width="64" height="64" rx="14" fill="none" stroke="#FFAC00" stroke-width="2" stroke-opacity="0.6" />
+  <text x="44" y="58" text-anchor="middle" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="28" font-weight="900" letter-spacing="1">LH</text>
+  
+  <!-- Airline Logotype -->
+  <text x="96" y="50" fill="#0F172A" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="30" font-weight="800" letter-spacing="0.5">Lufthansa</text>
+  <text x="98" y="72" fill="#64748B" font-family="'Inter', sans-serif" font-size="12" font-weight="700" letter-spacing="2.5" text-transform="uppercase">German Airlines</text>
+</svg>

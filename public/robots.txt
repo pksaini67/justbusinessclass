@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow administrative and internal endpoints
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /livewire/*
+
+# Sitemaps
+Sitemap: https://justbusinessclass.us/sitemap.xml

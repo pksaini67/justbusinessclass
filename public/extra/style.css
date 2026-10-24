@@ -1,0 +1,738 @@
+/* ==========================================================================
+   AIRTRIP MAKER — MODERN HEADER & FOOTER DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+    --atm-navy: #071324;
+    --atm-navy-light: #0f2342;
+    --atm-primary: #0052cc;
+    --atm-primary-dark: #003d99;
+    --atm-primary-soft: #eef4ff;
+    --atm-gold: #f59e0b;
+    --atm-gold-hover: #d97706;
+    --atm-danger: #e11d48;
+    --atm-text: #1e293b;
+    --atm-muted: #64748b;
+    --atm-border: #e2e8f0;
+    --atm-radius: 12px;
+    --atm-transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--atm-text);
+    background-color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   1. TOP UTILITY STRIP
+   ========================================================================== */
+.atm-topstrip {
+    background: var(--atm-navy);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.atm-topstrip-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.atm-topstrip-left,
+.atm-topstrip-right {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.atm-top-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.atm-top-divider {
+    width: 1px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.atm-topstrip-right a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: var(--atm-transition);
+}
+
+.atm-topstrip-right a:hover {
+    color: #fff;
+}
+
+/* ==========================================================================
+   2. MAIN HEADER & NAVBAR
+   ========================================================================== */
+.atm-header {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--atm-border);
+    transition: var(--atm-transition);
+    z-index: 1030;
+}
+
+.atm-header-scrolled {
+    box-shadow: 0 10px 30px -10px rgba(7, 19, 36, 0.1);
+}
+
+.atm-navbar {
+    padding: 0.65rem 0;
+}
+
+.atm-logo-img {
+    max-height: 46px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Navigation Links */
+.atm-nav-list {
+    gap: 0.2rem;
+}
+
+.atm-nav-link {
+    color: var(--atm-text) !important;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0.55rem 0.85rem !important;
+    border-radius: 8px;
+    transition: var(--atm-transition);
+    display: inline-flex;
+    align-items: center;
+}
+
+.atm-nav-link:hover,
+.atm-nav-link:focus,
+.atm-nav-link.show {
+    color: var(--atm-primary) !important;
+    background: var(--atm-primary-soft);
+}
+
+/* Hot Deals Pill */
+.atm-hot-pill {
+    color: var(--atm-danger) !important;
+    background: #fff1f2;
+    border: 1px solid #ffe4e6;
+    gap: 0.35rem;
+}
+
+.atm-hot-pill:hover {
+    background: var(--atm-danger) !important;
+    color: #fff !important;
+    border-color: var(--atm-danger);
+}
+
+/* ==========================================================================
+   3. MEGA MENU & DROPDOWNS
+   ========================================================================== */
+.atm-mega {
+    width: 100%;
+    left: 0;
+    right: 0;
+    border: none;
+    border-top: 1px solid var(--atm-border);
+    border-bottom: 3px solid var(--atm-primary);
+    border-radius: 0 0 16px 16px;
+    padding: 2rem 0;
+    margin-top: 0 !important;
+    background: #ffffff;
+    box-shadow: 0 25px 50px -12px rgba(7, 19, 36, 0.18);
+}
+
+/* Smooth hover open on Desktop (XL and above) */
+@media (min-width: 1200px) {
+    .atm-navbar .dropdown:hover>.dropdown-menu {
+        display: block;
+        animation: atmFadeUp 0.2s ease forwards;
+    }
+}
+
+@keyframes atmFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.atm-mega-title {
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--atm-muted);
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.atm-mega-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.atm-mega-list li+li {
+    margin-top: 0.25rem;
+}
+
+.atm-mega-list a,
+.atm-simple-drop .dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    color: var(--atm-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--atm-transition);
+}
+
+.atm-mega-list a i,
+.atm-simple-drop .dropdown-item i {
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: var(--atm-transition);
+    color: var(--atm-primary);
+}
+
+.atm-mega-list a:hover,
+.atm-simple-drop .dropdown-item:hover {
+    background: var(--atm-primary-soft);
+    color: var(--atm-primary);
+    padding-left: 1rem;
+}
+
+.atm-mega-list a:hover i,
+.atm-simple-drop .dropdown-item:hover i {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Simple Dropdown */
+.atm-simple-drop {
+    min-width: 230px;
+    padding: 0.6rem;
+    border: 1px solid var(--atm-border);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px -5px rgba(7, 19, 36, 0.12);
+}
+
+/* Mega Promo Box */
+.atm-mega-promo {
+    background: linear-gradient(135deg, var(--atm-navy) 0%, var(--atm-primary-dark) 100%);
+    border-radius: 14px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.atm-promo-badge {
+    align-self: flex-start;
+    background: rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.5);
+    color: #fcd34d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 50px;
+    margin-bottom: 0.75rem;
+}
+
+.atm-btn-gold {
+    background: var(--atm-gold);
+    color: #071324;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    transition: var(--atm-transition);
+}
+
+.atm-btn-gold:hover {
+    background: var(--atm-gold-hover);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   4. DESKTOP & MOBILE CALL CTAs
+   ========================================================================== */
+.atm-desktop-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.atm-cta-card {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.4rem 0.85rem 0.4rem 0.5rem;
+    border-radius: 50px;
+    background: #f8fafc;
+    border: 1px solid var(--atm-border);
+    text-decoration: none;
+    transition: var(--atm-transition);
+}
+
+.atm-cta-card:hover {
+    background: var(--atm-primary-soft);
+    border-color: #b3d1ff;
+    transform: translateY(-1px);
+}
+
+.atm-cta-card-ca:hover {
+    background: #fff1f2;
+    border-color: #fecdd3;
+}
+
+.atm-cta-flag {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.atm-cta-flag img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.atm-live-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 9px;
+    height: 9px;
+    background: #10b981;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.atm-cta-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.atm-cta-info small {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--atm-muted);
+}
+
+.atm-cta-info strong {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--atm-navy);
+}
+
+/* Mobile Call Chip */
+.atm-call-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--atm-primary-soft);
+    color: var(--atm-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 82, 204, 0.2);
+}
+
+.atm-pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: atmPulse 1.8s infinite;
+}
+
+@keyframes atmPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.atm-call-menu {
+    min-width: 250px;
+    border-radius: 14px;
+    border: 1px solid var(--atm-border);
+    padding: 0.5rem;
+}
+
+.atm-call-drop-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 10px;
+}
+
+.atm-call-drop-item small {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--atm-muted);
+}
+
+.atm-call-drop-item strong {
+    font-size: 0.95rem;
+    color: var(--atm-navy);
+}
+
+/* Mobile Toggler */
+.atm-toggler {
+    border: 1px solid var(--atm-border);
+    border-radius: 10px;
+    padding: 0.4rem 0.65rem;
+    font-size: 1.35rem;
+    color: var(--atm-navy);
+}
+
+.atm-toggler:focus {
+    box-shadow: none;
+}
+
+/* ==========================================================================
+   5. MOBILE OFFCANVAS
+   ========================================================================== */
+.atm-offcanvas {
+    width: 320px !important;
+}
+
+.atm-mobile-accordion .accordion-button {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--atm-navy);
+    padding: 0.9rem 1.25rem;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.atm-m-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--atm-primary-soft);
+    color: var(--atm-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.atm-no-collapse::after {
+    display: none !important;
+}
+
+.atm-no-collapse {
+    text-decoration: none;
+}
+
+.atm-mobile-accordion .accordion-body {
+    padding: 0.25rem 1.25rem 1rem 3.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.atm-mobile-accordion .accordion-body a {
+    color: var(--atm-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.3rem 0;
+}
+
+.atm-mobile-accordion .accordion-body a:hover {
+    color: var(--atm-primary);
+}
+
+.atm-m-call-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #fff;
+    border: 1px solid var(--atm-border);
+    padding: 0.65rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--atm-navy);
+}
+
+.atm-m-call-btn small {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--atm-muted);
+}
+
+.atm-m-call-btn strong {
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+/* ==========================================================================
+   6. DEMO HERO (Placeholder)
+   ========================================================================== */
+.atm-demo-hero {
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top right, #dbeafe 0%, #f8fafc 60%);
+}
+
+/* ==========================================================================
+   7. FOOTER & PRE-FOOTER
+   ========================================================================== */
+.atm-footer {
+    background: var(--atm-navy);
+    color: rgba(255, 255, 255, 0.75);
+    position: relative;
+    padding-top: 2rem;
+}
+
+/* Pre-footer Call Banner */
+.atm-prefooter {
+    transform: translateY(-50%);
+    margin-bottom: -1.5rem;
+}
+
+.atm-prefooter-box {
+    background: linear-gradient(120deg, var(--atm-primary-dark) 0%, var(--atm-primary) 100%);
+    border-radius: 18px;
+    padding: 1.75rem 2rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 82, 204, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.atm-prefooter-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.75rem;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.atm-footer-top {
+    padding: 2rem 0 3rem;
+}
+
+.atm-footer-logo {
+    max-height: 42px;
+}
+
+.atm-footer-about {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 1.25rem;
+}
+
+.atm-footer-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.atm-trust-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.atm-footer-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 1.1rem;
+    position: relative;
+}
+
+.atm-footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.atm-footer-list li+li {
+    margin-top: 0.55rem;
+}
+
+.atm-footer-list a {
+    color: rgba(255, 255, 255, 0.68);
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: var(--atm-transition);
+    display: inline-block;
+}
+
+.atm-footer-list a:hover {
+    color: #fff;
+    transform: translateX(4px);
+}
+
+/* Footer Call Cards */
+.atm-footer-contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.atm-footer-call-card {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    background: var(--atm-navy-light);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    transition: var(--atm-transition);
+}
+
+.atm-footer-call-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.atm-footer-call-card small {
+    display: block;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.atm-footer-call-card strong {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.atm-call-arrow {
+    margin-left: auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--atm-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atm-footer-email {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.atm-footer-email:hover {
+    color: #fff;
+}
+
+.atm-footer-hr {
+    border-color: rgba(255, 255, 255, 0.12);
+    margin: 0;
+}
+
+.atm-footer-bottom {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.atm-footer-bottom-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.atm-footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    transition: var(--atm-transition);
+}
+
+.atm-footer-bottom-links a:hover {
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .atm-prefooter {
+        transform: translateY(0);
+        margin-bottom: 1.5rem;
+        padding-top: 1rem;
+    }
+
+    .atm-prefooter-box {
+        padding: 1.25rem;
+    }
+
+    .atm-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
